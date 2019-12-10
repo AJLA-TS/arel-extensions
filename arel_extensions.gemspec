@@ -20,7 +20,9 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
 
-  s.add_dependency('arel', '>= 6.0')
+  # AJLA -- arel is bundled with activerecord in rails 6
+  #s.add_dependency('arel', '>= 6.0')
+  s.add_dependency('activerecord', '~> 6.0')
 
   s.add_development_dependency('minitest', '~> 5.9')
   s.add_development_dependency('rdoc', '~> 4.0')
